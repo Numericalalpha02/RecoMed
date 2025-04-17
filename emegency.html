@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Medical Info</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #dc3545; /* Emergency color */
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .info-item strong {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #emergency-mode {
+            display: none; /* Initially hidden */
+        }
+
+        .toggle-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Emergency Medical Information</h2>
+
+        <div id="normal-view">
+            <p>This is the normal view. In an emergency, responders can access critical information without logging in by activating emergency mode.</p>
+            <button id="activate-emergency" class="toggle-button">Activate Emergency Mode</button>
+        </div>
+
+        <div id="emergency-mode">
+            <h3><span style="color: #dc3545;">EMERGENCY MODE</span></h3>
+            <div class="info-item">
+                <strong>Blood Type:</strong> <span id="blood-type">O+</span>
+            </div>
+            <div class="info-item">
+                <strong>Allergies:</strong> <span id="allergies">Penicillin, Peanuts</span>
+            </div>
+            <div class="info-item">
+                <strong>Emergency Contact 1:</strong>
+                <span id="contact-name-1">Jane Doe</span> - <span id="contact-phone-1">123-456-7890</span>
+            </div>
+            <div class="info-item">
+                <strong>Emergency Contact 2:</strong>
+                <span id="contact-name-2">John Smith</span> - <span id="contact-phone-2">987-654-3210</span>
+            </div>
+            <button id="deactivate-emergency" class="toggle-button">Deactivate Emergency Mode</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const activateButton = document.getElementById('activate-emergency');
+            const deactivateButton = document.getElementById('deactivate-emergency');
+            const normalView = document.getElementById('normal-view');
+            const emergencyMode = document.getElementById('emergency-mode');
+
+            activateButton.addEventListener('click', function() {
+                normalView.style.display = 'none';
+                emergencyMode.style.display = 'block';
+            });
+
+            deactivateButton.addEventListener('click', function() {
+                emergencyMode.style.display = 'none';
+                normalView.style.display = 'block';
+            });
+
+            // In a real application, the data below would be dynamically loaded
+            // from a secure storage without requiring a login in emergency mode.
+            document.getElementById('blood-type').textContent = 'AB-';
+            document.getElementById('allergies').textContent = 'Dust, Pollen';
+            document.getElementById('contact-name-1').textContent = 'Alice Brown';
+            document.getElementById('contact-phone-1').textContent = '111-222-3333';
+            document.getElementById('contact-name-2').textContent = 'Bob Green';
+            document.getElementById('contact-phone-2').textContent = '444-555-6666';
+        });
+    </script>
+</body>
+</html>

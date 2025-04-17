@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>Medical Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <style>
+        /* Emergency Mode Styles */
+        #emergency-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        #emergency-mode {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            z-index: 999;
+            text-align: center;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+
+        .toggle-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="emergency-button">
+        <button style="background-color: red; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;" id="activate-emergency">
+            Emergency
+        </button>
+    </div>
+
+    <div id="emergency-mode">
+        <h3><span style="color: #dc3545;">EMERGENCY MODE</span></h3>
+        <div class="info-item">
+            <strong>Blood Type:</strong> <span id="blood-type">O+</span>
+        </div>
+        <div class="info-item">
+            <strong>Allergies:</strong> <span id="allergies">Penicillin, Peanuts</span>
+        </div>
+        <div class="info-item">
+            <strong>Emergency Contact 1:</strong>
+            <span id="contact-name-1">Jane Doe</span> - <span id="contact-phone-1">123-456-7890</span>
+        </div>
+        <div class="info-item">
+            <strong>Emergency Contact 2:</strong>
+            <span id="contact-name-2">John Smith</span> - <span id="contact-phone-2">987-654-3210</span>
+        </div>
+        <button id="deactivate-emergency" class="toggle-button">Deactivate Emergency Mode</button>
+    </div>
+
+    <div id="arrow">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+    <nav>
+        <div class="container">
+            <div class="menu-par">
+                <div class="logo-par">
+                    <a href="index.html">
+                        <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            RecoMed</h2>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a class="menu-hover" href="index.html">Home</a></li>
+                        <li><a class="menu-hover" href="#CATEGORIES" class="btn">Feature</a></li>
+                        <li><a class="menu-hover" href="#Subscribe" class="btn">Detail</a></li>
+                        <li><a class="menu-hover" href="#news" class="btn">Chat Bot</a></li>
+                        <li><a class="menu-hover" href="index.html">About</a></li>
+                        <li><a class="menu-hover" href="Login page.html">Login</a></li>
+                    </ul>
+                </div>
+                <div id="toggle-btn">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="header-info-par">
+                <h1 class="typewrite" data-period="2000"
+                    data-type='["Where your health records become recommendations","Transforming medical data into meaningful recommendations."]'>
+                    —
+                </h1>
+                <p>"Your health is personal—so your care should be too. Every test result, prescription, and visit tells
+                    a part of your story. We take all that information and turn it into clear, simple recommendations
+                    you can actually use. Whether it's a change in diet, a check-up reminder, or a new wellness goal, we
+                    help you take the next step—one that's made just for you."
+                </p>
+                <a href="read_more.html" class="a">Read More</a>
+            </div>
+            <div class="video">
+                <video id="video" autoplay loop muted>
+                    <source src="RecoMed bg.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </header>
+    <!-- Second Slides Section -->
+    <section id="welcome-text">
+        <h1><b>FEATURES</b></h1>
+        <div class="container" id="CATEGORIES">
+
+            <h2>RecoMed: Empowering You with a Smarter Medical Memory</h2>
+            <p></p>
+        </div>
+    </section>
+    <!-- Slides Section Start-->
+    <section id="slides-par">
+        <div class="container">
+            <div class="slides">
+                <div class="slide_1 slide_2">
+                    <div class="slide-info">
+                        <p><a href="index.html">
+                                <font color="white"><u>Emergency Mode</u></font>
+                            </a></p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_3">
+                    <div class="slide-info">
+                        <p><a href=" http://127.0.0.1:5000/run_notebook" target="_blank">Predictive desies Health</a></p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_4">
+                    <div class="slide-info">
+                        <p>QR Scanner</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_5">
+                    <div class="slide-info">
+                        <p>Quick Chat</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+   
+    <section id="blog">
+        <div class="container" id="news">
+            <h3>News And Events</h3>
+            <div class="blog-par">
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/global.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>BBC</li>
+                            <li>24.12.2024</li>
+                        </ul>
+                        <h4>Global News Podcast</h4>
+                        <p>Produced by the BBC World Service, this podcast delivers the day's top stories from around
+                            the world, providing concise and comprehensive news coverage.</p>
+
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/npr.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>npr</li>
+                            <li>24.12.2024</li>
+                        </ul>
+                        <h4>Up First</h4>
+                        <p>NPR's morning news podcast delivers the day's top stories in a concise format, helping
+                            listeners stay updated on important events.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="blog-par">
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/Daily-Podcast.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>The New York Times</li>
+                            <li>24.12.2024</li>
+                        </ul>
+                        <h4>The Daily</h4>
+                        <p>Presented by The New York Times, this podcast provides in-depth analysis of major news
+                            stories, offering a deeper understanding of current events.</p>
+
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/newscast.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>BBC</li>
+                            <li>24.12.2024</li>
+                        </ul>
+                        <h4>Newscast</h4>
+                        <p>A BBC News podcast that delves into the day's main news and political events, offering
+                            analysis and discussions with correspondents and experts.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mutiple Slider Section Ends -->
+
+    <!-- Footer Starts-->
+    <footer>
+        <div class="container">
+            <div class="footer-par">
+                <div class="footer-1 ">
+                    <h3 class="footer-logo-h">CONTACT US</h3>
+                </div>
+                <div class="footer-1 footer-info">
+                    <h3>Email</h3>
+                    <ul>
+                        <li><a href="">singhji@gmail.com</a></li>
+                        <li><a href="">chandanm@gmail.com</a></li>
+                        <li><a href="">nayakanshu@gmail.com</a></li>
+                        <li><a href="">sahoashish@gmail.com</a></li>
+                        <li><a href="">patriabhi@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-1 footer-info">
+                    <h3>Mobile no</h3>
+                    <ul>
+                        <li><a href="">+91 34898*****</a></li>
+                        <li><a href="">+91 12456*****</a></li>
+                        <li><a href="">+91 99885*****</a></li>
+                        <li><a href="">+91 09745*****</a></li>
+                        <li><a href="">+91 24785*****</a></li>
+                    </ul>
+                </div>
+                <div class="footer-1 footer-info">
+                    <h3>FAQ </h3>
+                    <ul>
+                        <li><a href="">How can I listen to the podcasts?</a></li>
+                        <li><a href="">Are the podcasts free?</a></li>
+                        <li><a href="">How often are new episodes released?</a></li>
+                        <li inputmode="button"><a href="">more</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <p class="copyright">PRESENTED BY TENSOR TROOPERS</p>
+    </footer>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/extrenaljq.js"></script>
+    <script>
+        // Get references to the buttons and the emergency mode section
+        const activateEmergencyButton = document.getElementById('activate-emergency');
+        const deactivateEmergencyButton = document.getElementById('deactivate-emergency');
+        const emergencyMode = document.getElementById('emergency-mode');
+
+        // Show the emergency mode when the "Emergency" button is clicked
+        activateEmergencyButton.addEventListener('click', () => {
+            emergencyMode.style.display = 'block';
+        });
+
+        // Hide the emergency mode when the "Deactivate Emergency Mode" button is clicked
+        deactivateEmergencyButton.addEventListener('click', () => {
+            emergencyMode.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

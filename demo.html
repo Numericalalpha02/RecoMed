@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title> Medical Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <style>
+        #emergency-mode {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            text-align: center;
+        }
+
+        #emergency-mode h3 {
+            color: #dc3545;
+            margin-bottom: 15px;
+        }
+
+        .emergency-info {
+            margin-bottom: 10px;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #edcaca;
+            border-radius: 5px;
+            background-color: #fdecea;
+        }
+
+        .emergency-info strong {
+            font-weight: bold;
+            color: #a94442;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #close-emergency {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        #close-emergency:hover {
+            background-color: #c82333;
+        }
+
+        #emergency-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="emergency-overlay"></div>
+    <div id="emergency-button" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+        <button id="activate-emergency"
+            style="background-color: red; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">
+            Emergency
+        </button>
+    </div>
+
+    <div id="emergency-mode">
+        <h3><span style="color: #dc3545;">EMERGENCY MODE</span></h3>
+        <div class="emergency-info">
+            <strong>Blood Type:</strong> <span id="blood-type">O+</span>
+        </div>
+        <div class="emergency-info">
+            <strong>Allergies:</strong> <span id="allergies">Penicillin, Peanuts</span>
+        </div>
+        <div class="emergency-info">
+            <strong>Emergency Contact 1:</strong>
+            <span id="contact-name-1">Jane Doe</span> - <span id="contact-phone-1">123-456-7890</span>
+        </div>
+        <div class="emergency-info">
+            <strong>Emergency Contact 2:</strong>
+            <span id="contact-name-2">John Smith</span> - <span id="contact-phone-2">987-654-3210</span>
+        </div>
+        <button id="close-emergency">Close Emergency Mode</button>
+    </div>
+
+    <div id="arrow">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+    <nav>
+        <div class="container">
+            <div class="menu-par">
+                <div class="logo-par">
+                    <a href="index.html">
+                        <h2
+                            style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                            RecoMed</h2>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a class="menu-hover" href="index.html">Home</a></li>
+                        <li><a class="menu-hover" href="#CATEGORIES" class="btn">Feature</a></li>
+                        <li><a class="menu-hover" href="#Subscribe" class="btn">Subscribe</a></li>
+                        <li><a class="menu-hover" href="#news" class="btn">Chat Bot</a></li>
+                        <li><a class="menu-hover" href="index.html">About</a></li>
+                        <li><a class="menu-hover" href="Login page.html">Login</a></li>
+                    </ul>
+                </div>
+                <div id="toggle-btn">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="header-info-par">
+                <h1 class="typewrite" data-period="2000"
+                    data-type='["Where your health records become recommendations","Transforming medical data into meaningful recommendations."]'>
+                    —
+                </h1>
+                <p>"Your health is personal—so your care should be too. Every test result, prescription, and visit tells
+                    a part of your story. We take all that information and turn it into clear, simple recommendations
+                    you can actually use. Whether it's a change in diet, a check-up reminder, or a new wellness goal, we
+                    help you take the next step—one that's made just for you."
+                </p>
+                <a href="read_more.html" class="a">Read More</a>
+            </div>
+            <div class="video">
+                <video id="video" autoplay loop muted>
+                    <source src="RecoMed bg.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </header>
+    <section id="welcome-text">
+        <h1><b>FEATURES</b></h1>
+        <div class="container" id="CATEGORIES">
+
+            <h2>RecoMed: Empowering You with a Smarter Medical Memory</h2>
+            <p></p>
+        </div>
+    </section>
+    <section id="slides-par">
+        <div class="container">
+            <div class="slides">
+                <div class="slide_1 slide_2">
+                    <div class="slide-info">
+                        <p><a href="index.html">
+                                <font color="white"><u>Emergency Mode</u></font>
+                            </a></p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_3">
+                    <div class="slide-info">
+                        <p>Predictive AI Health</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_4">
+                    <div class="slide-info">
+                        <p>QR Scanner</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_5">
+                    <div class="slide-info">
+                        <p>Quick Chat</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+    <section id="blog">
+        <div class="container" id="news">
+            <!-- <h3>News And Events</h3>
+            <div class="blog-par">
+                <div class="blog-content">
+                    <div class="blog-img-par">
+                        <img src="images/slider/global.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>BBC</li>
+                            <li>24.12.2024</li>
+                        </ul>
+                        <h4>Global News Podcast</h4>
+                        <p>Produced by the BBC World Service, this podcast delivers the day's top stories from around
+                            the world, providing concise and comprehensive news coverage.</p>
+
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img-par">
+                        <img src="images/slider/npr.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>npr</li>
+                            <li>24.12.2024</li>
+                        </ul>
+                        <h4>Up First</h4>
+                        <p>NPR's morning news podcast delivers the day's top stories in a concise format, helping
+                            listeners stay updated on important events.</p>
+
+                    </div>
+                </div>
+            </div> -->
+            <div class="blog-par">
+                <div class="blog-content">
